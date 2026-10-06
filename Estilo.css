@@ -1,0 +1,78 @@
+body {
+    background-color: black;
+  margin: 0;                 /* Remove as margens padrão do navegador */
+  height: 100vh;             /* Força o body a ter a altura total da tela */
+  display: flex;             /* Ativa o Flexbox */
+  justify-content: center;   /* Centraliza na horizontal */
+  align-items: center;       /* Centraliza na vertical */
+}
+h1{
+position: absolute;
+top: 5%;
+font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+color: gold;
+}
+
+.quadrado {
+  width: 450px;
+  height: 450px;
+ background-color: red;
+}
+.botao{
+    position: absolute;
+  top: 90%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Garante a centralização perfeita */
+  
+  /* Estilos visuais do botão (opcional) */
+  padding: 8px 16px;
+  background-color: #ffffff;
+  color: #3498db;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+}
+    .explodir{
+    position: fixed;
+
+    width: 300px;
+    height: 300px;
+
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    z-index: 9999;
+
+    animation: aparecer 1s forwards;
+}
+.imagem-final{
+    position: fixed;
+
+    width: 600px;
+    height: 600px;
+
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    animation: aparecer 1s ease forwards;
+}
+@keyframes aparecer{
+    from{
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(0.5);
+    }
+
+    to{
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+    }
+}
